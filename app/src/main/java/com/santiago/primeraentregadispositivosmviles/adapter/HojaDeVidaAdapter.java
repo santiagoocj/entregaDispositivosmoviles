@@ -56,7 +56,7 @@ public class HojaDeVidaAdapter extends BaseAdapter implements Filterable {
             viewHolder = (ViewHolder) convertView.getTag();
         }else{
             convertView = inflater.inflate(R.layout.hoja_vida_item, parent,false);
-            viewHolder = new ViewHolder(parent);
+            viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
         }
         viewHolder.recurso.setImageResource(hojasDeVidaOut.get(position).getRecurso());
