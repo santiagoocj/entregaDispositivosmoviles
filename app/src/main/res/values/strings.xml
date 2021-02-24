@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">primera entrega dispositivos móviles</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_hoja_vida">Hoja de Vida</string>
+    <string name="menu_artista">Artista</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="hojas_de_vida">Hojas de vida</string>
+    <string name="nombre_hoja_vida">Buscar...</string>
+    <string name="integrante_santiago">Santiago Ocampo Jimenez</string>
+</resources>

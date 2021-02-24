@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_hoja_vida">
+
+    <fragment
+        android:id="@+id/nav_hoja_vida"
+        android:name="com.santiago.primeraentregadispositivosmviles.ui.hojaDeVida.HojaDeVidaFragment"
+        android:label="@string/menu_hoja_vida"
+        tools:layout="@layout/fragment_hoja_vida" />
+
+    <fragment
+        android:id="@+id/nav_artista"
+        android:name="com.santiago.primeraentregadispositivosmviles.ui.artista.ArtistaFragment"
+        android:label="@string/menu_artista"
+        tools:layout="@layout/fragment_artista" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.santiago.primeraentregadispositivosmviles.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+</navigation>
