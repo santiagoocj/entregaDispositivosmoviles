@@ -13,4 +13,6 @@
     <string name="hojas_de_vida">Hojas de vida</string>
     <string name="nombre_hoja_vida">Buscar...</string>
     <string name="integrante_santiago">Santiago Ocampo Jimenez</string>
+    <string name="artistas">Artistas</string>
+    <string name="buscar_artista">Buscar...</string>
 </resources>
