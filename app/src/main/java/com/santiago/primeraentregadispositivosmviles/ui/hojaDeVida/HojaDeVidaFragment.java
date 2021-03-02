@@ -41,6 +41,7 @@ public class HojaDeVidaFragment extends Fragment {
         loadInformation();
         hojaDeVidaAdapter = new HojaDeVidaAdapter(getContext(), hojasDeVida);
         listViewHojaDeVida.setAdapter(hojaDeVidaAdapter);
+        editTextWatcher();
         return root;
     }
 
@@ -53,7 +54,7 @@ public class HojaDeVidaFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-
+                    hojaDeVidaAdapter.getFilter().filter(s);
             }
 
             @Override
@@ -66,5 +67,6 @@ public class HojaDeVidaFragment extends Fragment {
     private void loadInformation() {
         hojasDeVida = new ArrayList<>();
         hojasDeVida.add(new HojaDeVida(R.drawable.santiago, "Santiago Ocampo Jimenez","una persona positiva, le gusta hacer ejercício, la programación y uno de sus principales hobbits son las motos."));
+        hojasDeVida.add(new HojaDeVida(R.drawable.camilo, "Camilo Ramirez Montoya","una persona creativa, apasionada y dispuesta a asumir retos que me ayuden a crecer continuamente tanto en el ámbito personal como en el técnico.."));
     }
 }

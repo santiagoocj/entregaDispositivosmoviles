@@ -43,6 +43,7 @@ public class ArtistaFragment extends Fragment {
         loadInformation();
         artistaAdapter = new ArtistaAdapter(getContext(), artistas);
         listViewArtistas.setAdapter(artistaAdapter);
+        editTextWatcher();
         return root;
     }
 

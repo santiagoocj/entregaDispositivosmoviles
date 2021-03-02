@@ -97,7 +97,7 @@ public class ArtistaAdapter extends BaseAdapter implements Filterable {
                 notifyDataSetChanged();
             }
         };
-        return null;
+        return filter;
     }
 
     //biding de los elementos graficos del layout artista_item
