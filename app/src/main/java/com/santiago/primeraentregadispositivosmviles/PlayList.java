@@ -1,6 +1,7 @@
 package com.santiago.primeraentregadispositivosmviles;
 
 import android.content.ClipData;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,24 +14,27 @@ import com.santiago.primeraentregadispositivosmviles.model.Artista;
 public class PlayList extends AppCompatActivity {
 
     private Artista item;
-    private TextView lb_nombre_artistas_item;
-    private TextView lb_genero_artistas;
-    private ImageView img_artistas;
+    private TextView nombreArt;
+    private TextView generoArt;
+    private ImageView imagenArt;
+
+    MediaPlayer mp;
+    int posicion=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.artista_item);
+        setContentView(R.layout.artista_music);
 
         item= (Artista) getIntent().getSerializableExtra("objetoData");
 
-        lb_nombre_artistas_item=(TextView) findViewById(R.id.lb_nombre_artistas_item);
-        lb_genero_artistas=(TextView) findViewById(R.id.lb_genero_artistas);
-        img_artistas=(ImageView) findViewById(R.id.img_artistas);
+        nombreArt=(TextView) findViewById(R.id.nombre_art);
+        generoArt=(TextView) findViewById(R.id.genero_art);
+        imagenArt=(ImageView) findViewById(R.id.imagen_art);
 
-        lb_nombre_artistas_item.setText(item.getNombre());
-        lb_genero_artistas.setText(item.getNombre());
-        img_artistas.setImageResource(item.getRecurso());
+        nombreArt.setText(item.getNombre());
+        generoArt.setText(item.getGenero());
+        imagenArt.setImageResource(item.getRecurso());
 
 
     }

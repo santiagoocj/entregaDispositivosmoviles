@@ -2,6 +2,7 @@ package com.santiago.primeraentregadispositivosmviles.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,9 +13,11 @@ import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.santiago.primeraentregadispositivosmviles.PlayList;
 import com.santiago.primeraentregadispositivosmviles.R;
 import com.santiago.primeraentregadispositivosmviles.model.Artista;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,13 +29,14 @@ public class ArtistaAdapter extends BaseAdapter implements Filterable {
     private final LayoutInflater inflater;
     private List<Artista> artistasIn;
     private List<Artista> artistasOut;
+    private Context contexto;
 
     public ArtistaAdapter(Context contexto, List<Artista> artistaList) {
+        this.contexto=contexto;
         artistasIn = artistaList;
         artistasOut = artistaList;
         inflater = LayoutInflater.from(contexto);
     }
-
 
     @Override
     public int getCount() {
@@ -51,6 +55,7 @@ public class ArtistaAdapter extends BaseAdapter implements Filterable {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        final Artista item=(Artista) getItem(position);
         ViewHolder viewHolder;
         if(convertView != null){
             viewHolder = (ViewHolder) convertView.getTag();
@@ -58,19 +63,23 @@ public class ArtistaAdapter extends BaseAdapter implements Filterable {
             convertView = inflater.inflate(R.layout.artista_item, parent, false);
             viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
+            viewHolder.imagen.setImageResource(artistasOut.get(position).getRecurso());
+            viewHolder.nombre.setText(artistasOut.get(position).getNombre());
+            viewHolder.genero.setText(artistasOut.get(position).getGenero());
+
         }
         viewHolder.imagen.setImageResource(artistasOut.get(position).getRecurso());
         viewHolder.nombre.setText(artistasOut.get(position).getNombre());
         viewHolder.genero.setText(artistasOut.get(position).getGenero());
 
-        /*listViewArtistas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent=new Intent(contex, PlayList.class);
-                intent.putExtra("objetoData",artistas.get(position));
-            }
-        });*/
 
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(contexto,PlayList.class);
+                intent.putExtra("objetoData",item);
+                contexto.startActivity(intent); }
+        });
 
         return convertView;
     }

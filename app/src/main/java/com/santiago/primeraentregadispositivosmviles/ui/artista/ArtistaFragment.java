@@ -49,16 +49,8 @@ public class ArtistaFragment extends Fragment {
         loadInformation();
         artistaAdapter = new ArtistaAdapter(getContext(), artistas);
         listViewArtistas.setAdapter(artistaAdapter);
-
-        /*listViewArtistas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent=new Intent(getContext(), PlayList.class);
-                intent.putExtra("objetoData",artistas.get(position));
-            }
-        });*/
-
         editTextWatcher();
+
         return root;
     }
     private Object artistas(int position) {
@@ -86,10 +78,10 @@ public class ArtistaFragment extends Fragment {
 
     private void loadInformation() {
         artistas = new ArrayList<>();
-        artistas.add(new Artista(R.drawable.ic_adele,"Adele","Pop"));
-        artistas.add(new Artista(R.drawable.ic_bob_marley, "Bob Marley","Reguee"));
-        artistas.add(new Artista(R.drawable.ic_maicol, "Michael Jackson","Pop"));
-        artistas.add(new Artista(R.drawable.ic_shakira, "Shakira","Pop"));
-        artistas.add(new Artista(R.drawable.ic_drake, "Drake","Rap"));
+        artistas.add(new Artista(R.drawable.ic_adele,"Adele","Pop",R.raw.AdeleSetFire));
+        artistas.add(new Artista(R.drawable.ic_bob_marley, "Bob Marley","Reguee",R.raw.AdeleSetFire));
+        artistas.add(new Artista(R.drawable.ic_maicol, "Michael Jackson","Pop",R.raw.AdeleSetFire));
+        artistas.add(new Artista(R.drawable.ic_shakira, "Shakira","Pop",R.raw.AdeleSetFire));
+        artistas.add(new Artista(R.drawable.ic_drake, "Drake","Rap",R.raw.AdeleSetFire));
     }
 }

@@ -29,7 +29,6 @@ public class HojaDeVidaAdapter extends BaseAdapter implements Filterable {
         hojasDeVidaIn = hojasDeVida;
         hojasDeVidaOut = hojasDeVida;
         inflater = LayoutInflater.from(context);
-
     }
 
     @Override
