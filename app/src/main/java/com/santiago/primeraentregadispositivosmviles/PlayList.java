@@ -35,5 +35,18 @@ public class PlayList extends AppCompatActivity {
         generoArt.setText(item.getGenero());
         imagenArt.setImageResource(item.getRecurso());
 
+        /*public void playCerdo(View view) {
+            playSound(R.raw.cerdo);
+        }
+
+        public void playGato(View view) {
+            playSound( R.raw.gato);
+        }
+
+        private void playSound(int resource){
+            MediaPlayer mediaPlayer = MediaPlayer.create(this,resource);
+            mediaPlayer.start();
+        }*/
+
     }
 }
