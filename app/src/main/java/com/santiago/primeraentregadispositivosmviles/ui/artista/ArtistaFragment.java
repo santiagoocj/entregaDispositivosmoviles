@@ -1,18 +1,24 @@
 package com.santiago.primeraentregadispositivosmviles.ui.artista;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import com.santiago.primeraentregadispositivosmviles.PlayList;
 import com.santiago.primeraentregadispositivosmviles.R;
+
 import com.santiago.primeraentregadispositivosmviles.adapter.ArtistaAdapter;
 import com.santiago.primeraentregadispositivosmviles.model.Artista;
 
@@ -43,8 +49,20 @@ public class ArtistaFragment extends Fragment {
         loadInformation();
         artistaAdapter = new ArtistaAdapter(getContext(), artistas);
         listViewArtistas.setAdapter(artistaAdapter);
+
+        /*listViewArtistas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent=new Intent(getContext(), PlayList.class);
+                intent.putExtra("objetoData",artistas.get(position));
+            }
+        });*/
+
         editTextWatcher();
         return root;
+    }
+    private Object artistas(int position) {
+        return artistas(position);
     }
 
     private void editTextWatcher(){

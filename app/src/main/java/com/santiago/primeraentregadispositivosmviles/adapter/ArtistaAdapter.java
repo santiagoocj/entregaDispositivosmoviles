@@ -1,9 +1,11 @@
 package com.santiago.primeraentregadispositivosmviles.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
@@ -53,13 +55,23 @@ public class ArtistaAdapter extends BaseAdapter implements Filterable {
         if(convertView != null){
             viewHolder = (ViewHolder) convertView.getTag();
         }else {
-            convertView = inflater.inflate(R.layout.artsita_item, parent, false);
+            convertView = inflater.inflate(R.layout.artista_item, parent, false);
             viewHolder = new ViewHolder(convertView);
             convertView.setTag(viewHolder);
         }
         viewHolder.imagen.setImageResource(artistasOut.get(position).getRecurso());
         viewHolder.nombre.setText(artistasOut.get(position).getNombre());
         viewHolder.genero.setText(artistasOut.get(position).getGenero());
+
+        /*listViewArtistas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent=new Intent(contex, PlayList.class);
+                intent.putExtra("objetoData",artistas.get(position));
+            }
+        });*/
+
+
         return convertView;
     }
 
