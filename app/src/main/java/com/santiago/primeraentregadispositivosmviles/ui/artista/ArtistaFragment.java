@@ -78,10 +78,10 @@ public class ArtistaFragment extends Fragment {
 
     private void loadInformation() {
         artistas = new ArrayList<>();
-        artistas.add(new Artista(R.drawable.ic_adele,"Adele","Pop",R.raw.AdeleSetFire));
-        artistas.add(new Artista(R.drawable.ic_bob_marley, "Bob Marley","Reguee",R.raw.AdeleSetFire));
-        artistas.add(new Artista(R.drawable.ic_maicol, "Michael Jackson","Pop",R.raw.AdeleSetFire));
-        artistas.add(new Artista(R.drawable.ic_shakira, "Shakira","Pop",R.raw.AdeleSetFire));
-        artistas.add(new Artista(R.drawable.ic_drake, "Drake","Rap",R.raw.AdeleSetFire));
+        artistas.add(new Artista(R.drawable.ic_adele,"Adele","Pop",R.raw.someonelikeyou));
+        artistas.add(new Artista(R.drawable.ic_bob_marley, "Bob Marley","Reguee",R.raw.isthislove));
+        artistas.add(new Artista(R.drawable.ic_maicol, "Michael Jackson","Pop",R.raw.historyteaser));
+        artistas.add(new Artista(R.drawable.ic_shakira, "Shakira","Pop",R.raw.meenamore));
+        artistas.add(new Artista(R.drawable.ic_drake, "Drake","Rap",R.raw.baby));
     }
 }

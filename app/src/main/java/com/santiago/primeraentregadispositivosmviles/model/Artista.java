@@ -11,6 +11,6 @@ public class Artista implements Serializable {
     private int recurso;
     private String nombre;
     private String genero;
-    private int cancion;
+
 
 }

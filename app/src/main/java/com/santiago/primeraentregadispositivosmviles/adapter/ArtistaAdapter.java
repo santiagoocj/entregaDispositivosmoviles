@@ -2,6 +2,7 @@ package com.santiago.primeraentregadispositivosmviles.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -66,7 +67,6 @@ public class ArtistaAdapter extends BaseAdapter implements Filterable {
             viewHolder.imagen.setImageResource(artistasOut.get(position).getRecurso());
             viewHolder.nombre.setText(artistasOut.get(position).getNombre());
             viewHolder.genero.setText(artistasOut.get(position).getGenero());
-
         }
         viewHolder.imagen.setImageResource(artistasOut.get(position).getRecurso());
         viewHolder.nombre.setText(artistasOut.get(position).getNombre());
